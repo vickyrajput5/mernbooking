@@ -29,7 +29,7 @@ try {
   const token = await jwt.sign({id:this._id , isAdmin:this.isAdmin}, process.env.JWT)
   console.log(`this is token: ${token}`);
     res.cookie("jwt", token, {
-        expires: new Date(Date.now() + 100000),
+        // expires: new Date(Date.now() + 100000),
         httpOnly:true
     }).status(200).json(user)
 

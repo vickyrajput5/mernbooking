@@ -29,9 +29,9 @@ module.exports = getByIdusercontrol = async(req, res, next)=>{
 }
 module.exports = getAllusercontrol =  async(req, res, next)=>{
     try {
-        const users = await User.find()
-        console.log(users);
-        res.send(users); 
+        const user = await User.find()
+        console.log(user);
+        res.send(user); 
     } catch (error) {
        next(error)
     }
