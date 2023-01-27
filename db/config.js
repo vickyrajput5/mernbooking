@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
-require("dotenv").config()
-mongoose.connect("mongodb+srv://waqar51:4090475Wsdb@booking.n3bdjtu.mongodb.net/HotelBocking").then(()=>{
+require('dotenv').config();
+mongoose.connect(process.env.Local_Host).then(()=>{
     console.log("Connection is Successfull");
 }).catch(()=>{
     console.log("No Connection");
